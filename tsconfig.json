@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+	"outDir": "./dist/",
+	"module": "ESNext",
+	"lib": ["es2018", "dom"],
+	"target": "es2017",
+	"noImplicitAny": false,
+	"noEmitOnError": true
+    },
+    "files": [
+	"lib/check/check.ts"
+    ]
+}

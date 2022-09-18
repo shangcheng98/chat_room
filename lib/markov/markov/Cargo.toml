@@ -1,0 +1,35 @@
+[package]
+name = "markov"
+version = "1.0.3"
+description = "A generic markov chain implementation in Rust."
+authors = ["Aaron Weiss <aaronweiss74@gmail.com>"]
+license = "CC0-1.0"
+keywords = ["markov", "chain", "probability"]
+documentation = "https://docs.rs/markov/"
+repository = "https://github.com/aatxe/markov"
+readme = "README.md"
+exclude = [
+    "conquest_of_bread",
+    "jabberwocky",
+    "koran",
+    "test",
+]
+
+[badges]
+maintenance = { status = "passively-maintained" }
+travis-ci = { repository = "aatxe/markov" }
+
+[features]
+default = ["graph", "markgen", "yaml"]
+graph = ["petgraph", "itertools"]
+markgen = ["getopts"]
+yaml = ["serde_yaml"]
+
+[dependencies]
+getopts = { version = "0.2", optional = true }
+itertools = { version = "0.7", optional = true }
+petgraph = { version = "0.4", optional = true }
+rand = "*"
+serde = "1.0"
+serde_derive = "1.0"
+serde_yaml = { version = "0.7", optional = true }
